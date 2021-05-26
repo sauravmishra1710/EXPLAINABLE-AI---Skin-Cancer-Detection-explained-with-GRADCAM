@@ -1,0 +1,2 @@
+# EXPLAINABLE-AI---Skin-Cancer-Detection-explained-with-GRADCAM-
+Diagnose the presence of skin cancer in a person using CNN and as well explain what led the CNN to arrive at the decision.  Visual explanations are made utilizing the Gradient-weighted Class Activation Mapping (Grad-CAM), the gradients flowing into the final convolutional layer to produce a coarse localization map highlighting the important regions in the image for considered for arriving at the decision. The original paper for GRADCAM can be found @ https://arxiv.org/abs/1610.02391
