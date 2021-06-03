@@ -214,8 +214,8 @@ class GradCamUtils():
         ax[2].imshow(superimposed_img)
 
         ax[0].title.set_text('Original\nImage')
-        ax[1].title.set_text('Class\nActivation\nHeatmap')
-        ax[2].title.set_text('Class\nActivation\nBlended\nImage')
+        ax[1].title.set_text('Class Activation\nHeatmap')
+        ax[2].title.set_text('Class Activation\nBlended Image')
 
         ax[0].axis('off')
         ax[1].axis('off')
