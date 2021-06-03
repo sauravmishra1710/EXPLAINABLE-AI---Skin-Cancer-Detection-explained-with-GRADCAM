@@ -217,7 +217,7 @@ class CAMUtilities():
 
         ax[0].title.set_text('Original Image')
         ax[1].title.set_text('Class\nActivation\nHeatmap')
-        ax[2].title.set_text('Class\nActivation\nBlended\nImage')
+        ax[2].title.set_text('Class\nActivation\bBlended\nImage')
 
         ax[0].axis('off')
         ax[1].axis('off')
