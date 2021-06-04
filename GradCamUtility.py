@@ -181,7 +181,11 @@ class GradCamUtils():
         # Resize to the size of the image
         # Apply colormap
         heatmap = np.uint8(255 * heatmap)
+        
+        # upsample the class actiavtion to match the size of the original image 
+        # before the 2 images can be blended for final visualization.
         heatmap = cv2.resize(heatmap, (image.shape[1], image.shape[0]))
+        
         heatmap = cv2.applyColorMap(heatmap, cv2.COLORMAP_JET)
 
         # Superimpose the heatmap on original image

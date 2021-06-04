@@ -125,6 +125,9 @@ class CAMUtilities():
             cam += weight * conv_outputs[idx, :, :]
 
         cam /= np.max(cam)
+        
+        # upsample the class actiavtion to match the size of the original image 
+        # before the 2 images can be blended for final visualization.
         cam = cv2.resize(cam, (image.shape[1], image.shape[2]))
 
         heatmap = cv2.applyColorMap(np.uint8(255 * cam), cv2.COLORMAP_JET)
@@ -217,7 +220,7 @@ class CAMUtilities():
 
         ax[0].title.set_text('Original Image')
         ax[1].title.set_text('Class\nActivation\nHeatmap')
-        ax[2].title.set_text('Class\nActivation\bBlended\nImage')
+        ax[2].title.set_text('Class\nActivation\nBlended\nImage')
 
         ax[0].axis('off')
         ax[1].axis('off')
